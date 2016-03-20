@@ -1,0 +1,20 @@
+ITEM
+Name: Internetin kuninkaan kruunu
+Size: 35x35x35
+Fragile: True
+Weight: 1.5
+ITEM
+Name: Nimbus 2000
+Size: 40x120x40
+Fragile: False
+Weight: 10
+ITEM
+Name: Tuplauskone
+Size: 40x40x20
+Fragile: True
+Weight: 20
+ITEM
+Name: ES-lava
+Size: 50x20x50
+Fragile: False
+Weight: 12.0

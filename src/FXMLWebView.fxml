@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="600.0" maxWidth="700.0" minHeight="600.0" minWidth="700.0" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLWebViewController">
+   <children>
+      <GridPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="700.0" percentWidth="100.0" prefWidth="700.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="0.0" prefHeight="429.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="150.0" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane prefHeight="130.0" prefWidth="600.0" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="290.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="440.0" minWidth="440.0" prefWidth="440.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="150.0" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="refresh" alignment="CENTER" contentDisplay="RIGHT" layoutX="519.0" layoutY="183.0" mnemonicParsing="false" onAction="#refresh" prefWidth="205.0" text="Päivitä" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="45.0" left="10.0" right="235.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>                     
+                  </Button>
+                  <Button fx:id="statistics" mnemonicParsing="false" onAction="#statistics" prefWidth="205.0" text="Tilastoja" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="45.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>                     
+                  </Button>
+                  <ListView fx:id="packets" prefHeight="200.0" prefWidth="200.0">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </ListView>
+                  <ComboBox fx:id="cities" onAction="#addposts" prefWidth="205.0" promptText="Lisää automaatteja kartalle" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="235.0" top="10.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <Button fx:id="send" mnemonicParsing="false" onAction="#sendpacket" prefWidth="205.0" text="Lähetä paketti" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="235.0" top="45.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="createnew" mnemonicParsing="false" onAction="#newpacket" prefWidth="205.0" text="Uusi paketti" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="45.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>                     
+                  </Button>
+                  <Button fx:id="loadButtonStorage" mnemonicParsing="false" onAction="#loadStorage" prefWidth="205.0" text="Lataa varasto" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>                     
+                  </Button>
+                  <Button fx:id="clearbutton" mnemonicParsing="false" onAction="#clearroutes" prefWidth="205.0" text="Tyhjennä kartta reiteistä" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="235.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>                      
+                  </Button>
+                  <Button fx:id="exit" mnemonicParsing="false" onAction="#exit" prefWidth="205.0" text="Lopeta" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>                      
+                  </Button>
+               </children>
+            </GridPane>
+            <WebView fx:id="web" prefWidth="600.0" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

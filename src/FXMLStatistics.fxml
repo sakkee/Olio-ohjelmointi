@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="712.0" prefWidth="455.0" scaleShape="false" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLStatisticsController">
+   <children>
+      <Label layoutX="120.0" layoutY="35.0" text="Pakettitilastot">
+         <font>
+            <Font name="Arial" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="136.0" layoutY="102.0" text="Pakettien määrä:">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="packetNumber" editable="false" focusTraversable="false" layoutX="258.0" layoutY="97.0" prefHeight="27.0" prefWidth="58.0">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </TextField>
+      <ListView fx:id="packetItems" focusTraversable="false" layoutX="14.0" layoutY="171.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="56.0" layoutY="145.0" text="Lähetetyt tuotteet">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <ListView fx:id="packetLengths" focusTraversable="false" layoutX="237.0" layoutY="171.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="282.0" layoutY="145.0" text="Matkojen pituudet">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="401.0" text="Lähtöpaikat">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <ListView fx:id="packetStarts" focusTraversable="false" layoutX="14.0" layoutY="429.0" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="packetDestinations" focusTraversable="false" layoutX="241.0" layoutY="429.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="288.0" layoutY="401.0" text="Saapumispaikat">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="closeButton" layoutX="177.0" layoutY="659.0" mnemonicParsing="false" onAction="#closeStage" text="Sulje ikkuna">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,21 @@
+CLASS
+Priority: 1
+Max Distance (kms): 150
+Fragile Allowed: False
+Max Size (cms): 45x45x45
+Max Weight (kgs): 30
+Duration (hrs): 24
+CLASS
+Priority: 2
+Max Distance (kms): 0
+Fragile Allowed: True
+Max Size (cms): 40x40x40
+Max Weight (kgs): 20
+Duration (hrs): 72
+CLASS 
+Priority: 3
+Max Distance (kms): 0
+Fragile Allowed: False
+Max Size (cms): 120x120x120
+Max Weight (kgs): 100
+Duration (hrs): 168

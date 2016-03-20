@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLDocumentController">
+   <children>
+      <ComboBox fx:id="objectscombo" layoutX="40.0" layoutY="66.0" onAction="#itemselection" prefHeight="25.0" prefWidth="232.0" promptText="Esinelista">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Luo uusi esine" />
+              </FXCollections>
+          </items>
+      </ComboBox>      
+      <ComboBox fx:id="classescombo" layoutX="40.0" layoutY="146.0" onAction="#chooseclass" prefHeight="25.0" prefWidth="232.0" promptText="Luokat" visible="false" />
+      <ComboBox fx:id="startcombo" layoutX="40.0" layoutY="265.0" onAction="#choosestartlocation" prefHeight="25.0" prefWidth="232.0" promptText="Lähtökaupunki" visible="false" />
+      <ComboBox fx:id="destinationcombo" layoutX="331.0" layoutY="265.0" onAction="#choosedestination" prefHeight="25.0" prefWidth="232.0" promptText="Kohdekaupunki" visible="false" />
+      <TextField fx:id="massa" layoutX="389.0" layoutY="146.0" prefHeight="25.0" prefWidth="174.0" visible="false">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></TextField>          
+      <TextField fx:id="newname" layoutX="389.0" layoutY="66.0" prefHeight="25.0" prefWidth="174.0" visible="false">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></TextField>          
+      <TextField fx:id="width" layoutX="389.0" layoutY="103.0" prefHeight="25.0" prefWidth="44.0" promptText="cm" visible="false">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></TextField>          
+      <TextField fx:id="height" layoutX="453.0" layoutY="103.0" prefHeight="25.0" prefWidth="44.0" promptText="cm" visible="false">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></TextField>      
+      <TextField fx:id="depth" layoutX="519.0" layoutY="103.0" prefHeight="25.0" prefWidth="44.0" promptText="cm" visible="false">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></TextField>
+      <Label layoutX="439.0" layoutY="107.0" text="x" visible="false" fx:id="x1">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>          
+      <Label layoutX="505.0" layoutY="107.0" text="x" visible="false" fx:id="x2">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>          
+      <Label fx:id="namelabel" layoutX="329.0" layoutY="70.0" text="Nimi:" visible="false">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>          
+      <Label fx:id="sizelabel" layoutX="329.0" layoutY="107.0" text="Koko:" visible="false">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>          
+      <Label fx:id="massalabel" layoutX="329.0" layoutY="150.0" text="Massa(kg)" visible="false">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>          
+      <CheckBox fx:id="frahilecheck" layoutX="389.0" layoutY="187.0" mnemonicParsing="false" text="Särkyvää" visible="false" />
+      <Button fx:id="newobjectbutton" layoutX="519.0" layoutY="183.0" mnemonicParsing="false" onAction="#newitem" prefHeight="25.0" prefWidth="44.0" text="Luo" visible="false">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Button>          
+      <Label layoutX="40.0" layoutY="14.0" text="LUO PAKETTI" visible="false">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>
+      <Label layoutX="40.0" layoutY="31.0" text="Valitse esine listasta, tai luo kokonaan uusi esine. Uusi esine lisätään listaan.">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>
+      <Label fx:id="classlabel" layoutX="40.0" layoutY="120.0" text="Missä luokassa haluat lähettää paketin?" visible="false">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>           
+      <ListView fx:id="startaddresslistview" layoutX="40.0" layoutY="297.0" prefHeight="154.0" prefWidth="232.0" visible="false" />
+      <ListView fx:id="targetaddresslistview" layoutX="331.0" layoutY="297.0" prefHeight="154.0" prefWidth="232.0" visible="false" />
+      <Button fx:id="newpacket" layoutX="487.0" layoutY="462.0" mnemonicParsing="false" onAction="#newpackage" text="Luo paketti" visible="false">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Button>           
+      <Button fx:id="cancel" layoutX="40.0" layoutY="462.0" mnemonicParsing="false" onAction="#cancel" text="Peruuta">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Button>
+      <WebView fx:id="web" layoutX="497.0" layoutY="19.0" prefHeight="15.0" prefWidth="15.0" visible="false" />           
+   </children>
+</AnchorPane>
